@@ -1,0 +1,48 @@
+{
+  "name": "@cxa/twx",
+  "version": "0.0.1",
+  "description": "clsx + tailwind-merge",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "file": [
+    "dist"
+  ],
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [
+    "tailwind",
+    "merge",
+    "clsx"
+  ],
+  "author": "https://github.com/cxa",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cxa/twx.git",
+    "directory": "twx"
+  },
+  "bugs": "https://github.com/cxa/twx/issues",
+  "homepage": "https://github.com/cxa/twx/",
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.5.4"
+  }
+}
