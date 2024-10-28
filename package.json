@@ -1,15 +1,21 @@
 {
   "name": "@cxa/twx",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "clsx + tailwind-merge",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup"
   },
-  "keywords": ["tailwind", "merge", "clsx"],
+  "keywords": [
+    "tailwind",
+    "merge",
+    "clsx"
+  ],
   "author": "https://github.com/cxa",
   "license": "MIT",
   "repository": {
