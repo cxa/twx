@@ -1,6 +1,9 @@
 name: Releases
 on: workflow_dispatch
 
+permissions:
+  contents: write
+
 jobs:
   changelog:
     runs-on: ubuntu-latest
@@ -15,12 +18,11 @@ jobs:
           version-file: "./package.json"
           output-file: "./CHANGELOG.md"
 
-      - name: Create Release 🚀
-        uses: actions/create-release@v1
+      - name: Create a Release 🚀
+        uses: softprops/action-gh-release@v2
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.PA_TOKEN }}
         with:
           tag_name: ${{ steps.changelog.outputs.tag }}
-          release_name: ${{ steps.changelog.outputs.tag }}
+          name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
+          token: ${{ secrets.PA_TOKEN }}
