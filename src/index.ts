@@ -1,8 +1,6 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
-export default function twx(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
+const twx = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
 
-export const $ = twx;
+export { twx as $, twx as default };
